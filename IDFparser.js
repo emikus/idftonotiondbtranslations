@@ -38,7 +38,8 @@ var languagesNames = Object.keys(wordTranslations);
 function getTranslationsFromIDF (word, languagesNames) {
   const IDFUrl = "https://www.indifferentlanguages.com/words/"
   
-  const browser = await puppeteer.launch({
+  return puppeteer
+  .launch({
     headless: true,
     args: ['--no-sandbox','--disable-setuid-sandbox']
   })
