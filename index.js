@@ -3,7 +3,7 @@ import http from 'http';
 import * as TranslationsUtils from "./IDFparser.js";
 import * as notionDBModyfier from "./notionDBModyfier.js";
 
-
+const PORT = process.env.PORT || 8080
 
 var wordTranslations = {
   Swedish: "Swedish",
@@ -55,7 +55,7 @@ var wordTranslations = {
             // default:          res.write('website.com/error_404');
         // }
         res.end();
-}).listen(8080);
+}).listen(PORT);
 
 
 

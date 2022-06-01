@@ -8,5 +8,8 @@
         "@notionhq/client": "^1.0.1",
         "cheerio": "^1.0.0-rc.11",
         "puppeteer": "^14.1.1"
+    },
+    "scripts": {
+        "start": "node index.js"
     }
 }
