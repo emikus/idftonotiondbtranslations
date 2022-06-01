@@ -1,6 +1,6 @@
 
-import puppeteer from "puppeteer";
 import $ from "cheerio";
+import rp from 'request-promise';
 import * as Utils from "./index.js";
 
 console.log(Utils)
@@ -38,28 +38,26 @@ var languagesNames = Object.keys(wordTranslations);
 function getTranslationsFromIDF (word, languagesNames) {
   const IDFUrl = "https://www.indifferentlanguages.com/words/"
   
-  return puppeteer
-  .launch({
-    headless: true,
-    args: ['--no-sandbox','--disable-setuid-sandbox']
-  })
-  .then(function(browser) {
-    console.log(222222222)
-    return browser.newPage();
-  })
-  .then(function(page) {
-    console.log(3333333333)
-    return page.goto(IDFUrl + word).then(function() {
-      console.log(31313131313131313131)
-      return page.content();
-      console.log(323323232323232323)
-    });
-  })
+  // return puppeteer
+  // .launch({
+  //   headless: true,
+  //   args: ['--no-sandbox','--disable-setuid-sandbox']
+  // })
+  // .then(function(browser) {
+  //   console.log(222222222)
+  //   return browser.newPage();
+  // })
+  // .then(function(page) {
+  //   console.log(3333333333)
+  //   return page.goto(IDFUrl + word).then(function() {
+  //     console.log(31313131313131313131)
+  //     return page.content();
+  //     console.log(323323232323232323)
+  //   });
+  // })
+  return rp(IDFUrl + word)
   .then(function(html) {
     console.log(44444444444)
-
-    
-
 
     languagesNames.forEach((language) => {
 
