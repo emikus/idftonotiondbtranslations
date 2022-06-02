@@ -1,9 +1,9 @@
 import { Client } from "@notionhq/client"
 
 
-const notion = new Client({ auth: "secret_XeUgzVaU4ZQ7nN3CB5NNOmGFdtrcFWCNgZiIZTIhvnF" })
+const notion = new Client({ auth: process.env.NOTION_INTEGRATION_KEY })
 
-const databaseId = '37a5d6cde4d34bca8741a3111e3a6c64'
+const databaseId = process.env.NOTION_TRANSLATIONS_DB_ID
 
 var wordTranslations = {
   Swedish: "Swedish",
@@ -143,6 +143,9 @@ async function addTranslationsToNotionDB(wordTranslations) {
           ],
         }
       }
+    })
+    .then(function (response) {
+      console.log("Success! Entry added.", response)
     })
     console.log("Success! Entry added.")
   } catch (error) {
