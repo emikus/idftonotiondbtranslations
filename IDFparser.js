@@ -3,8 +3,6 @@ import $ from "cheerio";
 import rp from 'request-promise';
 import * as Utils from "./index.js";
 
-console.log(Utils)
-
 var wordTranslations = {
   Swedish: "Swedish",
   French: "French",

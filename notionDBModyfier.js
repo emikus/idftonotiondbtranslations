@@ -144,9 +144,6 @@ async function addTranslationsToNotionDB(wordTranslations) {
         }
       }
     })
-    .then(function (response) {
-      console.log("Success! Entry added.", response)
-    })
     console.log("Success! Entry added.")
   } catch (error) {
     console.error(error.body)
