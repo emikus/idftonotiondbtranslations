@@ -5,7 +5,7 @@ import * as notionDBModyfier from "./notionDBModyfier.js";
 import util from 'util';
 
 // process.env.PORT ||
-const PORT =  process.env.PORT || 8080
+const PORT =  8080
 
 var wordTranslations = {
   Swedish: "Swedish",
@@ -57,10 +57,10 @@ var wordTranslations = {
 
 
     const wordToTranslate = queryObject.wordToTranslate
-              console.log(wordToTranslate)
-              TranslationsUtils.getTranslationsFromIDF(wordToTranslate, Object.keys(wordTranslations))
-              .then(function(wordTranslations) {
-                notionDBModyfier.addTranslationsToNotionDB(wordTranslations)
+              // console.log(wordToTranslate)
+              // TranslationsUtils.getTranslationsFromIDF(wordToTranslate, Object.keys(wordTranslations))
+              // .then(function(wordTranslations) {
+              //   notionDBModyfier.addTranslationsToNotionDB(wordTranslations)
     res.end();
   });
         switch(req.url){
