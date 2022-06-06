@@ -5,7 +5,7 @@ import * as notionDBModyfier from "./notionDBModyfier.js";
 import util from 'util';
 
 // process.env.PORT ||
-const PORT =  8080
+const PORT =  process.env.PORT || 8080
 
 var wordTranslations = {
   Swedish: "Swedish",
