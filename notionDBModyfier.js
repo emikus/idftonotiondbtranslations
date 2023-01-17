@@ -5,10 +5,6 @@ const notion = new Client({ auth: process.env.NOTION_INTEGRATION_KEY })
 
 const databaseId = process.env.NOTION_TRANSLATIONS_DB_ID
 
-// const notion = new Client({ auth: "secret_XeUgzVaU4ZQ7nN3CB5NNOmGFdtrcFWCNgZiIZTIhvnF" })
-
-// const databaseId = '37a5d6cde4d34bca8741a3111e3a6c64'
-
 var wordTranslations = {
   Swedish: "Swedish",
   French: "French",
