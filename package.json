@@ -1,0 +1,15 @@
+{
+    "name": "IDF-to-NotionDB-translations",
+    "type": "module",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "dependencies": {
+        "@notionhq/client": "^1.0.1",
+        "cheerio": "^1.0.0-rc.11",
+        "request-promise": "^4.2.6"
+    },
+    "scripts": {
+        "start": "node index.js"
+    }
+}
